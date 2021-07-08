@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Set;
 /**
  * @author lj.michale
- * @description Configuration for Jedis Sentinel pool.
+ * @description 哨兵模式 Configuration for Jedis Sentinel pool.
  * @date 2021-07-08
  */
 public class FlinkJedisSentinelConfig extends FlinkJedisConfigBase {
