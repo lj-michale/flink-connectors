@@ -20,6 +20,7 @@ import java.util.List;
  * @date 2021-07-08
  */
 public class FlumeSink<IN> extends RichSinkFunction<IN> {
+
     private static final Logger LOG = LoggerFactory.getLogger(FlumeSink.class);
 
     private static final int DEFAULT_MAXRETRYATTEMPTS = 3;
