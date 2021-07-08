@@ -6,7 +6,6 @@
     <groupId>com.aurora.flink</groupId>
     <artifactId>flink-connectors</artifactId>
     <version>1.0.1-SNAPSHOT</version>
-    <name>flink-connector-kudu</name>
     <packaging>pom</packaging>
 
    <!-- 子模块 -->
