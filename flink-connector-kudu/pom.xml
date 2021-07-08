@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <artifactId>flink-connectors</artifactId>
+        <groupId>com.aurora.flink</groupId>
+        <relativePath>../pom.xml</relativePath>
+        <version>1.0.1-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>flink-connector-kudu</artifactId>
+    <packaging>jar</packaging>
+
+    <!-- 主版本控制 -->
+    <properties>
+
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.apache.kudu</groupId>
+            <artifactId>kudu-client</artifactId>
+            <version>${kudu.version}</version>
+        </dependency>
+        <!--test dependencies-->
+        <dependency>
+            <groupId>org.apache.kudu</groupId>
+            <artifactId>kudu-test-utils</artifactId>
+            <version>${kudu.version}</version>
+            <scope>test</scope>
+        </dependency>
+<!--        <dependency>
+            <groupId>org.apache.kudu</groupId>
+            <artifactId>kudu-binary</artifactId>
+            <version>${kudu.version}</version>
+            <classifier>${os.detected.classifier}</classifier>
+            <scope>test</scope>
+        </dependency>-->
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

@@ -1,0 +1,4 @@
+catalogs:
+  - name: kudu
+    type: kudu
+    kudu.masters: szgl-qa-pc-components08-992.jpushoa.com:7051,szgl-qa-pc-components07-998.jpushoa.com:7051,szgl-qa-pc-components09-993.jpushoa.com:7051,szgl-qa-pc-components08-992.jpushoa.com:7051,szgl-qa-pc-components04-996.jpushoa.com:7051,szgl-qa-pc-components07-998.jpushoa.com:7051,szgl-qa-pc-components06-989.jpushoa.com:7051,szgl-qa-pc-components05-990.jpushoa.com:7051,szgl-qa-pc-components09-993.jpushoa.com:7051

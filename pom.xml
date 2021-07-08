@@ -4,10 +4,16 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.aurora.flink</groupId>
-    <artifactId>flink-connector-kudu</artifactId>
+    <artifactId>flink-connectors</artifactId>
     <version>1.0.1-SNAPSHOT</version>
     <name>flink-connector-kudu</name>
-    <packaging>jar</packaging>
+    <packaging>pom</packaging>
+
+   <!-- 子模块 -->
+    <modules>
+        <module>flink-connector-kudu</module>
+        <module>flink-connector-flume</module>
+    </modules>
 
     <!-- 主版本控制 -->
     <properties>
@@ -22,12 +28,14 @@
         <log4j.version>2.12.1</log4j.version>
         <junit.jupiter.version>5.4.1</junit.jupiter.version>
         <kudu.version>1.10.0</kudu.version>
+        <flume-ng.version>1.9.0</flume-ng.version>
         <flink-function.verion>1.0-SNAPSHOT</flink-function.verion>
         <mockito.version>1.10.19</mockito.version>
         <log4j2.version>2.13.3</log4j2.version>
+        <testcontainers.version>1.14.3</testcontainers.version>
     </properties>
 
-    <!--  配置deploy jar路径 id对应maven setting中的server配置 -->
+       <!--  配置deploy jar路径 id对应maven setting中的server配置 -->
     <distributionManagement>
         <!--  默认上传，一般为release-->
         <repository>
@@ -42,11 +50,6 @@
     </distributionManagement>
 
     <dependencies>
-        <dependency>
-            <groupId>org.apache.kudu</groupId>
-            <artifactId>kudu-client</artifactId>
-            <version>1.14.0</version>
-        </dependency>
         <dependency>
             <groupId>org.apache.flink</groupId>
             <artifactId>flink-streaming-java_${scala.binary.version}</artifactId>
@@ -82,22 +85,6 @@
             <artifactId>caffeine</artifactId>
             <version>${caffeine.version}</version>
         </dependency>
-        <!--test dependencies-->
-        <dependency>
-            <groupId>org.apache.kudu</groupId>
-            <artifactId>kudu-test-utils</artifactId>
-            <version>${kudu.version}</version>
-            <scope>test</scope>
-        </dependency>
-
-<!--        <dependency>
-            <groupId>org.apache.kudu</groupId>
-            <artifactId>kudu-binary</artifactId>
-            <version>${kudu.version}</version>
-            <classifier>${os.detected.classifier}</classifier>
-            <scope>test</scope>
-        </dependency>-->
-
         <dependency>
             <groupId>org.apache.flink</groupId>
             <artifactId>flink-clients_${scala.binary.version}</artifactId>
@@ -136,6 +123,19 @@
             <groupId>org.apache.logging.log4j</groupId>
             <artifactId>log4j-slf4j-impl</artifactId>
             <version>${log4j2.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.flink</groupId>
+            <artifactId>flink-tests</artifactId>
+            <version>${flink.version}</version>
+            <type>test-jar</type>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.testcontainers</groupId>
+            <artifactId>testcontainers</artifactId>
+            <version>${testcontainers.version}</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
