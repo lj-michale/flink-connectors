@@ -20,6 +20,12 @@
             <groupId>cn.jpush</groupId>
             <artifactId>jcache-client</artifactId>
             <version>1.9.4</version>
+            <exclusions>
+                <exclusion>
+                    <artifactId>slf4j-api</artifactId>
+                    <groupId>org.slf4j</groupId>
+                </exclusion>
+            </exclusions>
         </dependency>
     </dependencies>
 
