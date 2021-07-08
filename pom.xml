@@ -13,6 +13,8 @@
     <modules>
         <module>flink-connector-kudu</module>
         <module>flink-connector-flume</module>
+        <module>flink-connector-jcache</module>
+        <module>flink-connector-redis</module>
     </modules>
 
     <!-- 主版本控制 -->
