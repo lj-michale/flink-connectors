@@ -20,11 +20,11 @@ import org.apache.flink.types.Row;
  */
 public class KuduTableSink implements UpsertStreamTableSink<Row> {
 
-    // 写入配置构造器
+    /** 写入配置构造器 */
     private final KuduWriterConfig.Builder writerConfigBuilder;
-    // TableSchema
+    /** TableSchema */
     private final TableSchema flinkSchema;
-    // kudu table配置包含schema、tableName、表参数
+    /** kudu table配置包含schema、tableName、表参数 */
     private final KuduTableInfo tableInfo;
 
     public KuduTableSink(KuduWriterConfig.Builder configBuilder, KuduTableInfo tableInfo, TableSchema flinkSchema) {
