@@ -148,7 +148,6 @@ public class KuduTableFactory implements TableSourceFactory<Row>, TableSinkFacto
                 .withMaxRetryTimes(kuduMaxReties)
                 .build();
 
-
         TableSchema physicalSchema = KuduTableUtils.getSchemaWithSqlTimestamp(schema);
         KuduTableInfo tableInfo = KuduTableUtils.createTableInfo(tableName, schema, props);
 

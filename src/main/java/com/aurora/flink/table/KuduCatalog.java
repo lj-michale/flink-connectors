@@ -82,6 +82,7 @@ public class KuduCatalog extends AbstractReadOnlyCatalog {
         this("kudu", kuduMasters);
     }
 
+    @Override
     public Optional<TableFactory> getTableFactory() {
         return Optional.of(getKuduTableFactory());
     }
